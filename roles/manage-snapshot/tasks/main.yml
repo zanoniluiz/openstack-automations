@@ -1,0 +1,21 @@
+---
+# tasks file for manage-snapshot
+
+- name: create snapshot
+  openstack.cloud.volume_snapshot:
+    state: present
+    cloud: mordred
+    availability_zone: az2
+    display_name: test_snapshot
+    volume: test_volume
+  tag: create
+
+- name: delete snapshot
+  openstack.cloud.volume_snapshot:
+    state: absent
+    cloud: mordred
+    availability_zone: az2
+    display_name: test_snapshot
+    volume: test_volume
+  tag: delete
+

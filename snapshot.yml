@@ -1,0 +1,7 @@
+---
+- name: Automacao Snapshot Volumes
+  hosts: localhost
+  gather_facts: no
+  connection: local
+  roles:
+    - manage-snapshot

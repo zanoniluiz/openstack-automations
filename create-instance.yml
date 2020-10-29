@@ -1,0 +1,7 @@
+---
+- name: Automacao Provisionamento de Instancias
+  hosts: localhost
+  gather_facts: no
+  connection: local
+  roles:
+    - launch-instance
